@@ -1,9 +1,9 @@
 # Site settings
-title: 画面の依存から解放を目指す拠点
+title: REXTEC 画面依存
 email: service@rextec.se
 description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+url: "gamenizon.jp" # the base hostname & protocol for your site
 
 twitter_username:
 github_username:
