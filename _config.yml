@@ -1,5 +1,5 @@
 # Site settings
-title: REXTEC 画面依存
+title: 
 email: service@rextec.se
 description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
