@@ -383,4 +383,60 @@ body {
   color: inherit;
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 12px;
+  margin-top: 8px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #7e7e7e;
+  transition: 0.4s;
+}
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(43, 43, 43);
+  transition: 0.4s;
+}
+.switch input:checked + .slider {
+  background-color: rgb(164, 164, 164);
+}
+.switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.switch .slider.round {
+  border-radius: 34px;
+}
+.switch .slider.round:before {
+  border-radius: 50%;
+}
+
+#languageLabel {
+  margin-right: 20px; /* Space between the toggle and the text */
+  margin-left: 3px;
+  font-size: 18px; /* Adjust font size as needed */
+  color: rgb(211, 211, 211);
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
 /*# sourceMappingURL=main.css.map */
