@@ -56,16 +56,16 @@ function initializeLanguageToggle() {
     var elementsJp = document.querySelectorAll('[data-lang="jp"]');
 
     languageToggle.addEventListener('change', function() {
-        if(this.checked) {
-            // Switch to Japanese
-            languageLabel.textContent = 'EN';
-            elementsEn.forEach(element => element.style.display = 'none');
-            elementsJp.forEach(element => element.style.display = '');
-        } else {
-            // Switch back to Japanese
+        if(!this.checked) {
+            // Switch to English
             languageLabel.textContent = 'JP';
             elementsEn.forEach(element => element.style.display = '');
             elementsJp.forEach(element => element.style.display = 'none');
+        } else {
+            // Switch back to Japanese
+            languageLabel.textContent = 'EN';
+            elementsEn.forEach(element => element.style.display = 'none');
+            elementsJp.forEach(element => element.style.display = '');
         }
     });
 }

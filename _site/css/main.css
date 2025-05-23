@@ -204,6 +204,22 @@ header .header-content .header-content-inner p {
   }
 }
 
+.header-rextec {
+  background-image: url("../img/cheat_site/rextec_new.svg");
+}
+
+.header-rexcheck {
+  background-image: url("../img/cheat_site/rextan_front.svg");
+}
+
+.header-feature {
+  background-image: url("../img/cheat_site/features.svg");
+}
+
+.header-workflow {
+  background-image: url("../img/cheat_site/workflow.svg");
+}
+
 .section-heading {
   margin-top: 0;
 }

@@ -56,7 +56,7 @@ function initializeLanguageToggle() {
     var elementsJp = document.querySelectorAll('[data-lang="jp"]');
 
     languageToggle.addEventListener('change', function() {
-        if(this.checked) {
+        if(!this.checked) {
             // Switch to English
             languageLabel.textContent = 'JP';
             elementsEn.forEach(element => element.style.display = '');
