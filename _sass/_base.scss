@@ -210,6 +210,21 @@ header {
 .header-rexcheck { background-image: url("../img/cheat_site/rextan_front.svg"); }
 .header-feature  { background-image: url("../img/cheat_site/features.svg"); }
 .header-workflow { background-image: url("../img/cheat_site/workflow.svg"); }
+/* 1. Let the header be a positioning context */
+// .header-rexcheck {
+//     position: relative;
+//     overflow: hidden;          /* crop anything that spills outside */
+//   }
+/* 2. Make the video behave like a CSS background */
+.header-video {
+    position: absolute;
+    inset: 0;                  /* top:0; right:0; bottom:0; left:0 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* fill the box without distortion */
+    z-index: 1;               /* sit behind the real content */
+    pointer-events: none;      /* clicks go through to links in front */
+  }
 // Sections
 
 .section-heading {
