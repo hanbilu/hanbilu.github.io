@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body {
   height: 100%;
@@ -147,21 +148,30 @@ aside {
 
 header {
   position: relative;
-  height: 100vh;
-  min-height: auto;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
+  width: 100%;
+  /* ① Tell the browser the picture’s real aspect-ratio.      */
+  /*    (Replace 1920 / 1080 with your own WIDTH / HEIGHT.)    */
+  aspect-ratio: 1920/1080;
+  /* ② Never grow taller than the visible viewport.            */
+  max-height: 100vh; /* optional but avoids over-scrolls */
+  /* ③ Show the *whole* image, never crop.                     */
   background-image: url("../img/header.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; /* <-- the key change            */
+  /* keep the rest of your styling */
   text-align: center;
   color: white;
 }
 header .header-content {
-  position: relative;
+  /* was: position: relative; */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
   text-align: center;
-  padding: 100px 15px 100px;
+  padding: 0 15px;
   width: 100%;
 }
 header .header-content .header-content-inner h1 {
@@ -179,45 +189,45 @@ header .header-content .header-content-inner p {
   font-size: 16px;
   margin-bottom: 50px;
 }
-@media (min-width: 768px) {
+
+/* 2 – One-liner fallback for older browsers that lack aspect-ratio */
+@supports not (aspect-ratio: 1) {
   header {
-    min-height: 100%;
-  }
-  header .header-content {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    padding: 0 50px;
-  }
-  header .header-content .header-content-inner {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  header .header-content .header-content-inner p {
-    font-size: 18px;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    height: 0;
+    /* 1080 ÷ 1920 × 100%  =  56.25% (16 : 9) */
+    padding-top: 56.25%; /* same ratio as your image */
   }
 }
-
 .header-rextec {
-  background-image: url("../img/cheat_site/rextec_new.svg");
+  background-image: url("../img/cheat_site/eng/rextec_new.svg");
 }
 
 .header-rexcheck {
-  background-image: url("../img/cheat_site/rextan_front.svg");
+  background-image: url("../img/cheat_site/eng/rextan_front_vid.svg");
 }
 
 .header-feature {
-  background-image: url("../img/cheat_site/features.svg");
+  background-image: url("../img/cheat_site/eng/features.svg");
 }
 
 .header-workflow {
-  background-image: url("../img/cheat_site/workflow.svg");
+  background-image: url("../img/cheat_site/eng/workflow.svg");
+}
+
+.header-rextec-jp {
+  background-image: url("../img/cheat_site/jp/rextec_jp.svg");
+}
+
+.header-rexcheck-jp {
+  background-image: url("../img/cheat_site/jp/rextan_front_jp.svg");
+}
+
+.header-feature-jp {
+  background-image: url("../img/cheat_site/jp/features_jp.svg");
+}
+
+.header-workflow-jp {
+  background-image: url("../img/cheat_site/jp/workflow_jp.svg");
 }
 
 /* 1. Let the header be a positioning context */
@@ -465,6 +475,30 @@ body {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
+}
+
+/* --- About-Us tweaks --- */
+#about .section-heading,
+#about p,
+#about i {
+  color: #fff;
+} /* white text/icons on grey */
+.btn-ghost {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 10px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus {
+  background: #fff;
+  color: #333; /* dark text against new white bg */
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */

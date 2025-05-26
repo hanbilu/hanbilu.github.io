@@ -54,12 +54,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href=".." data-lang="jp" style="display: none;">スクリーニング・テスト</a>
+                    <a class="page-scroll" href=".." data-lang="jp" style="display: none;">スクリーニング・アプリ</a>
                     <a class="page-scroll" href=".." data-lang="en">Screening Tool</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="../gd" data-lang="jp" style="display: none;">画面中毒について</a>
+                    <a class="page-scroll" href="../" data-lang="jp" style="display: none;">画面中毒について</a>
                     <a class="page-scroll" href="../gd" data-lang="en">About Disorder</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#" data-lang="jp" style="display: none;">私たちについて</a>
+                    <a class="page-scroll" href="#" data-lang="en">About us</a>
                 </li>
                 <li class="nav-item">
                     <div class="language-toggle">
@@ -77,14 +81,20 @@
     <!-- /.container-fluid -->
 </nav>
 
-  <header class="header-rextec">
+  <header class="header-rextec" data-lang="en">
     <div class="header-content">
         <div class="header-content-inner">
         </div>
     </div>
 </header>
 
-  <section class="bg-primary" id="portfolio">
+<header class="header-rextec-jp" data-lang="jp" style="display: none;">
+    <div class="header-content">
+        <div class="header-content-inner">
+        </div>
+    </div>
+</header>
+  <section class="bg-primary" id="portfolio" style="background-color:#080808;">
     
     <div class="container">
         <div class="row">
@@ -100,9 +110,9 @@
         
 
         <!-- First Box -->
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-12">
             <a href="https://www.linkedin.com/in/kendal-fritzell/" class="portfolio-box page-scroll">
-                <img src="/img/portfolio/Kendal profil.jpg" class="img-responsive portfolio-image" alt="">
+                <img src="/img/portfolio/Kendal profil.jpg" class="img-responsive portfolio-image center-block" alt="" style="max-width:70%;height:auto;">
                 <div class="portfolio-box-caption">
                     <div class="portfolio-box-caption-content">
                         <div class="project-category text-faded">
@@ -118,9 +128,9 @@
         </div>
 
         <!-- Second Box -->
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-12">
             <a href="https://www.linkedin.com/in/hans-birkedal/" class="portfolio-box page-scroll">
-                <img src="/img/portfolio/Hans take 2.jpg" class="img-responsive portfolio-image" alt="">
+                <img src="/img/portfolio/Hans take 2.jpg" class="img-responsive portfolio-image center-block" alt="" style="max-width:70%;height:auto;">
                 <div class="portfolio-box-caption">
                     <div class="portfolio-box-caption-content">
                         <div class="project-category text-faded">
@@ -176,44 +186,51 @@
     </div>  
 </section>
 
-  <aside class="bg-primary">
-    <!-- <div class="bg-primary"> -->
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center" style="margin-top: -100px">
-                <h2 class="section-heading" data-lang="jp" style="display: none;">私たちについて</h2>
-                <h2 class="section-heading" data-lang="en">About us</h2>
-                <hr class="light">    
-                <hr class="primary">
-                <h3 data-lang="jp" style="display: none;">
-                    Rexcel Technologies (Rextec) は仙台市の支援を受けて立ち上げた会社です。私達は、学校で効果的かつ低コストで画面中毒をスクリーニングできるツール「レックス・チェック」を開発する企業です。ご質問やご意見がございましたら、ぜひお気軽にお問い合わせください。
-                </h3>
-                <h3 data-lang="en">
-                    Rexcel Technologies (Rextec) is a company founded with the mission to help society overcome emotional reliance on screens and to re-excel without the distractions of digital devices hindering human potential. We are currently developing a screening tool, available in Japan and English-speaking countries, for the early detection of gaming and internet disorders.</p>
-                <h3 data-lang="en">
-                    Order a Demo!
-                </h3>
-                <h3 data-lang="jp" style="display: none;">
-                    デモの興味
-                </h3>
-            </div>
-            
-        <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-            <a id="emailLink" href="mailto:service@rextec.se" data-user="service" data-domain="rextec" data-tld="se">
-                <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s" style="color: white"></i>
-                <p data-lang="jp" style="display: none; color: white"> メールをみる</p>
-                <p data-lang="en" style="color: white">View Email</p>
-                <!-- <p style="color: white">service@rextec.seservice@rextec.se</p> -->
-            </a>
+  <!-- =========  About Us  ========= -->
+<section id="about" class="bg-primary py-5">
+    <div class="container"><!-- keeps everything centred -->
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center"><!-- 8/12 wide, centred -->
+  
+          <!-- Headings -->
+          <h2 class="section-heading mb-4" data-lang="en">About&nbsp;Us</h2>
+          <h2 class="section-heading mb-4" data-lang="jp" style="display:none;">私たちについて</h2>
+  
+          <!-- Copy -->
+          <p class="mb-2" data-lang="en">
+            <strong>Rexcel Technologies&nbsp;(Rextec)</strong> is a Sendai-based startup on a mission
+            to help schools and families tackle screen dependency.<br>
+            Our flagship tool, <strong>RexCheck</strong>, screens for early signs of gaming and
+            internet disorders—quickly and at low cost.
+          </p>
+          <p class="mb-2" data-lang="jp" style="display:none;">
+            <strong>Rexcel&nbsp;Technologies（Rextec）</strong> は、学校や家庭がスクリーン依存に
+            取り組むことを支援する仙台発のスタートアップです。主力製品 <strong>RexCheck</strong>
+            はゲーム・インターネット依存の早期兆候を低コストでスクリーニングします。
+          </p>
+  
+          <p class="mb-4" data-lang="en"><strong>Need advice or a demo? Get in touch!</strong></p>
+          <p class="mb-4" data-lang="jp" style="display:none;"><strong>ご相談・デモのご依頼はこちらから！</strong></p>
+  
+          <!-- Calls-to-action -->
+          <a href="mailto:service@rextec.se"
+             class="btn-ghost mx-2" id="emailLink">
+            <i class="fa fa-envelope-o me-2"></i>
+            <span data-lang="en">Email&nbsp;Us</span>
+            <span data-lang="jp" style="display:none;">メール</span>
+          </a>
+  
+          <a href="mailto:service@rextec.se" class="btn-ghost mx-2">
+            <span data-lang="en">Request&nbsp;Demo</span>
+            <span data-lang="jp" style="display:none;">デモを依頼</span>
+          </a>
+  
         </div>
-        <div class="container">
-            <!-- Copyright section -->
-            <div class="row text-center" style="margin-bottom: -120px;margin-top: 250px; color: rgb(255, 255, 255);">
-                <p class="copyright-text">© 2025 Rexcel Technologies AB</p>
-            </div>
-        </div>
-    <!-- </div> -->
-</aside>
-
+      </div>
+    </div>
+  </section>
+  <!-- ======= / About Us ======= -->
+  
   <!-- jQuery -->
 <script src="/js/jquery.js"></script>
 

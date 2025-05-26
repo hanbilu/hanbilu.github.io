@@ -56,7 +56,7 @@ function initializeLanguageToggle() {
     var elementsJp = document.querySelectorAll('[data-lang="jp"]');
 
     languageToggle.addEventListener('change', function() {
-        if(!this.checked) {
+        if (!this.checked) {
             // Switch to English
             languageLabel.textContent = 'JP';
             elementsEn.forEach(element => element.style.display = '');
@@ -66,8 +66,18 @@ function initializeLanguageToggle() {
             languageLabel.textContent = 'EN';
             elementsEn.forEach(element => element.style.display = 'none');
             elementsJp.forEach(element => element.style.display = '');
+    
+            // Restart the Japanese video
+            const jpVideo = document.querySelector('.header-rexcheck-jp .header-video');
+            if (jpVideo) {
+                jpVideo.currentTime = 0;
+                jpVideo.play().catch(e => {
+                    console.warn('Autoplay failed:', e);
+                });
+            }
         }
     });
+    
 }
 
 window.onload = initializeLanguageToggle;
